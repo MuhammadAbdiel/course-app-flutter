@@ -6,7 +6,9 @@ class CategoryCard extends StatelessWidget {
   final _courseAmount;
   final _imageUrl;
 
-  CategoryCard(this._title, this._courseAmount, this._imageUrl);
+  const CategoryCard(this._title, this._courseAmount, this._imageUrl,
+      {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class CategoryCard extends StatelessWidget {
       },
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width / 2 - 30,
           height: MediaQuery.of(context).size.height / 4 - 20,
           child: Stack(
@@ -38,14 +40,14 @@ class CategoryCard extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       _title,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       '$_courseAmount Courses',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         color: Color(0xff8F95B2),
                       ),

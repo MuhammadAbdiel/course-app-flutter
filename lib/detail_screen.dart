@@ -5,14 +5,14 @@ import 'custom_tile.dart';
 class DetailScreen extends StatelessWidget {
   final _imageUrl;
 
-  DetailScreen(this._imageUrl);
+  const DetailScreen(this._imageUrl, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height / 2 + 40,
             width: MediaQuery.of(context).size.width,
             child: Hero(
@@ -26,7 +26,7 @@ class DetailScreen extends StatelessWidget {
           Positioned(
             top: 50,
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -34,42 +34,42 @@ class DetailScreen extends StatelessWidget {
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Icon(
+                    child: const Icon(
                       Icons.arrow_back_ios,
                       color: Color(0xff61688B),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       vertical: 5,
                       horizontal: 10,
                     ),
-                    color: Color(0xffFFD073),
-                    child: Text(
+                    color: const Color(0xffFFD073),
+                    child: const Text(
                       'BESTSELLER',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Text(
+                  const Text(
                     'DESIGN THINKING',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 28,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
-                    children: <Widget>[
+                    children: const <Widget>[
                       Icon(
                         Icons.people,
                         color: Color(0xff61688B),
@@ -97,11 +97,11 @@ class DetailScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
-                    children: <Widget>[
+                    children: const <Widget>[
                       Text(
                         '\$50',
                         style: TextStyle(
@@ -123,7 +123,7 @@ class DetailScreen extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Colors.grey[100],
-                  borderRadius: BorderRadius.vertical(
+                  borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(50),
                   ),
                 ),
@@ -132,17 +132,17 @@ class DetailScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      SizedBox(
+                      const SizedBox(
                         height: 40,
                       ),
-                      Text(
+                      const Text(
                         'Course Content',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       Column(
@@ -163,7 +163,7 @@ class DetailScreen extends StatelessWidget {
               child: Container(
                 height: 100,
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.vertical(
                     top: Radius.circular(50),
@@ -174,27 +174,27 @@ class DetailScreen extends StatelessWidget {
                   children: <Widget>[
                     MaterialButton(
                       onPressed: () {},
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         vertical: 10,
                       ),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
-                      color: Color(0xffFFEDEE),
-                      child: Icon(
+                      color: const Color(0xffFFEDEE),
+                      child: const Icon(
                         Icons.shop,
                         color: Color(0xffFF6670),
                       ),
                     ),
                     MaterialButton(
                       onPressed: () {},
-                      color: Color(0xff6E8AFA),
+                      color: const Color(0xff6E8AFA),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
-                      padding:
-                          EdgeInsets.symmetric(vertical: 10, horizontal: 90),
-                      child: Text(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 10, horizontal: 90),
+                      child: const Text(
                         'Buy Now',
                         style: TextStyle(
                           color: Colors.white,
