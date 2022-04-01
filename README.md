@@ -7,5 +7,5 @@ Politeknik Negeri Malang
 
 ## Course App
 
-<img src="assets/images/Group1.png"> <br>
-<img src="assets/images/Group2.png">
+<img src="assets/images/1.png"> <br>
+<img src="assets/images/2.png">
